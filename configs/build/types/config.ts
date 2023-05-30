@@ -12,5 +12,6 @@ export namespace ConfigOptions {
         mode: BuildMode;
         paths: BuildPaths;
         isDev: boolean;
+        port: number;
     }
 }
