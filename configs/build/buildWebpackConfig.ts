@@ -12,7 +12,7 @@ export function buildWebpackConfig(options: ConfigOptions.BuildOptions): webpack
         mode: mode,
         entry: paths.entry,
         devtool: 'inline-source-map',
-
+        devServer: buildDevServer(options),
         module: {
             rules: buildLoaders()
         },
@@ -24,5 +24,8 @@ export function buildWebpackConfig(options: ConfigOptions.BuildOptions): webpack
             path: paths.build,
             clean: true
         },
+        optimization: {
+            runtimeChunk: 'single',
+        }
     }
 }

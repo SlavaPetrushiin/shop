@@ -1,11 +1,3 @@
 import webpack from 'webpack';
+import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
 import { ConfigOptions } from './types/config';
-import { Configuration } from 'webpack-dev-server';
-
-export function buildDevServer({ paths, port }: ConfigOptions.BuildOptions): Configuration {
-    return {
-        static: paths.build,
-        port,
-        open: true
-    }
-}
