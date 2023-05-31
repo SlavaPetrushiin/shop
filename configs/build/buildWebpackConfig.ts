@@ -6,12 +6,12 @@ import { ConfigOptions } from './types/config';
 import webpack from 'webpack';
 
 export function buildWebpackConfig(options: ConfigOptions.BuildOptions): webpack.Configuration {
-    const { mode, paths } = options;
+    const { mode, paths, isDev } = options;
 
     return {
         mode: mode,
         entry: paths.entry,
-        devtool: 'inline-source-map',
+        devtool: isDev ?  'inline-source-map' : undefined,
         devServer: buildDevServer(options),
         module: {
             rules: buildLoaders()
