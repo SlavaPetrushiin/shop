@@ -5,6 +5,7 @@ export function buildDevServer({ port, paths }: ConfigOptions.BuildOptions): Dev
     return {
         static: paths.build,
         open: true,
-        port: port
+        port: port,
+        historyApiFallback: true
     }
 }
