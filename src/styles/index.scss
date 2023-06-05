@@ -1,0 +1,11 @@
+@import "./reset.scss";
+@import "./variables/global.scss";
+@import "./variables/variables.scss";
+
+@import "./theme/default.scss";
+@import "./theme/dark.scss";
+
+.app{
+	min-height: 100vh;
+	overflow: hidden;
+}
