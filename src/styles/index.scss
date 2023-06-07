@@ -2,10 +2,10 @@
 @import "./variables/global.scss";
 @import "./variables/variables.scss";
 
-@import "./theme/default.scss";
+@import "./theme/light.scss";
 @import "./theme/dark.scss";
 
-.app{
+.app {
 	min-height: 100vh;
 	overflow: hidden;
 }
