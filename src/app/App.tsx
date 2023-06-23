@@ -1,13 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/root";
-import React, { Suspense } from "react";
-import Main from "./pages/Main/Main";
-import AboutPageAsync from "./pages/About/AboutPage.async";
-import ContactsPageAsync from "./pages/Contacts/ContactsPage.async";
-import { ThemeProvider } from "./providers/thema/ThemaProvider";
-import "./styles/index.scss";
-import { useTheme } from "./providers/thema/ThemeContext";
-import { classNames } from "./helpers/classNames/classNames";
+import Root from "../routes/root";
+import { Suspense } from "react";
+import {MainPage} from "pages/MainPage";
+import {AboutPage} from "pages/AboutPage";
+import {ContactsPage} from "pages/ContactsPage";
+import { ThemeProvider, useTheme } from "app/providers/ThemeProvider";
+import { classNames } from "../helpers/classNames/classNames";
+import "app/styles/index.scss";
 
 const router = createBrowserRouter([
     {
@@ -16,15 +15,15 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Main />,
+                element: <MainPage />,
             },
             {
                 path: "about",
-                element: <AboutPageAsync />,
+                element: <AboutPage />,
             },
             {
                 path: "contacts",
-                element: <ContactsPageAsync />,
+                element: <ContactsPage />,
             },
         ],
     },

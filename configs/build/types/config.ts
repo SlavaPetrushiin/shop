@@ -6,6 +6,7 @@ export namespace ConfigOptions {
         entry: string;
         build: string;
         html: string;
+        src: string;
     }
 
     export interface BuildEnv{
