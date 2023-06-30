@@ -3,6 +3,7 @@ import cls from "./Navbar.module.scss";
 import { classNames } from "helpers/classNames/classNames";
 import { FunctionComponent } from "react";
 import { useTheme } from "app/providers/ThemeProvider";
+import { CustomLink } from "shared/CustomLink";
 
 interface INavbarProps {
     className?: string;
@@ -15,15 +16,15 @@ export const Navbar: FunctionComponent<INavbarProps> = (props) => {
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
             <nav className={cls.links}>
-                <Link className={cls.links_item} to={`/`}>
+                <CustomLink className={cls.links_item} to={`/`}>
                     Main
-                </Link>
-                <Link className={cls.links_item} to={`/about`}>
+                </CustomLink>
+                <CustomLink className={cls.links_item} to={`/about`}>
                     About
-                </Link>
-                <Link className={cls.links_item} to={`/contacts`}>
+                </CustomLink>
+                <CustomLink className={cls.links_item} to={`/contacts`}>
                     Contacts
-                </Link>
+                </CustomLink>
             </nav>
             <button onClick={toggleSchema}>Change theme</button>
         </div>

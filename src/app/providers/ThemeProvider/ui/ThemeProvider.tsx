@@ -9,9 +9,10 @@ const defaultSchema = (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as TypesSch
 
 export const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({ children }) => {
     const [theme, setTheme] = useState<TypesSchema>(defaultSchema);
-
+    console.log(theme);
     const toggleSchema = () => {
         let newTheme = theme === TypesSchema.LIGHT ? TypesSchema.DARK : TypesSchema.LIGHT;
+        console.log(newTheme);
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
         setTheme(newTheme);
     };
