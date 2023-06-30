@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 export enum TypesSchema {
-    DEFAULT = "light",
+    LIGHT = "light",
     DARK = "dark",
 }
 

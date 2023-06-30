@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Suspense } from "react";
-import {MainPage} from "pages/MainPage";
-import {AboutPage} from "pages/AboutPage";
-import {ContactsPage} from "pages/ContactsPage";
+import { MainPage } from "pages/MainPage";
+import { AboutPage } from "pages/AboutPage";
+import { ContactsPage } from "pages/ContactsPage";
 import { RootPage } from "pages/RootPage";
-import { ThemeProvider, useTheme } from "app/providers/ThemeProvider";
+import { useTheme } from "app/providers/ThemeProvider";
 import { classNames } from "../helpers/classNames/classNames";
 import "app/styles/index.scss";
 
@@ -33,13 +33,11 @@ export const App = () => {
     const { theme, toggleSchema } = useTheme();
 
     return (
-        <ThemeProvider>
-            <div className={classNames("app", {}, [theme, "ss"])}>
-                <button onClick={toggleSchema}>Change theme</button>
-                <Suspense fallback={<div>Loading...</div>}>
-                    <RouterProvider router={router} />
-                </Suspense>
-            </div>
-        </ThemeProvider>
+        <div className={classNames("app", {}, [theme])}>
+            <button onClick={toggleSchema}>Change theme</button>
+            <Suspense fallback={<div>Loading...</div>}>
+                <RouterProvider router={router} />
+            </Suspense>
+        </div>
     );
 };
