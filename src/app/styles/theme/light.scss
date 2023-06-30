@@ -1,4 +1,7 @@
-.app.default{
-	background-color: white;
-	color: black;
+.app.light {
+	--bg-color: #e8e8ea;
+	--inverted-bg-color: #090949;
+
+	--primary-color: #0032c2;
+	--secondary-color: #0449e0;
 }

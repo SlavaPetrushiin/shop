@@ -30,11 +30,10 @@ const router = createBrowserRouter([
 ]);
 
 export const App = () => {
-    const { theme, toggleSchema } = useTheme();
+    const { theme } = useTheme();
 
     return (
         <div className={classNames("app", {}, [theme])}>
-            <button onClick={toggleSchema}>Change theme</button>
             <Suspense fallback={<div>Loading...</div>}>
                 <RouterProvider router={router} />
             </Suspense>
