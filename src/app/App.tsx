@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "../routes/root";
 import { Suspense } from "react";
 import {MainPage} from "pages/MainPage";
 import {AboutPage} from "pages/AboutPage";
 import {ContactsPage} from "pages/ContactsPage";
+import { RootPage } from "pages/RootPage";
 import { ThemeProvider, useTheme } from "app/providers/ThemeProvider";
 import { classNames } from "../helpers/classNames/classNames";
 import "app/styles/index.scss";
@@ -11,7 +11,7 @@ import "app/styles/index.scss";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Root />,
+        element: <RootPage />,
         children: [
             {
                 index: true,
