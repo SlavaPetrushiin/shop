@@ -9,3 +9,9 @@
 	min-height: 100vh;
 	overflow: hidden;
 }
+
+.main-page {
+	height: calc(100vh - var(--height-header));
+
+	display: flex;
+}
