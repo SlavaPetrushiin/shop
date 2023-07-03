@@ -9,6 +9,11 @@ export function buildLoaders({ isDev }: ConfigOptions.BuildOptions): webpack.Rul
         exclude: /node_modules/,
     };
 
+    const svgLoader = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    };
+
     const cssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
@@ -19,9 +24,9 @@ export function buildLoaders({ isDev }: ConfigOptions.BuildOptions): webpack.Rul
                 options: {
                     modules: {
                         auto: (resourcePath: string) => resourcePath.includes('.module.'),
-                        localIdentName: isDev 
-                        ? "[path][name]__[local]--[hash:base64:5]" 
-                        : "[hash:base64:8]"
+                        localIdentName: isDev
+                            ? "[path][name]__[local]--[hash:base64:5]"
+                            : "[hash:base64:8]"
                     }
                 },
             },
@@ -32,6 +37,7 @@ export function buildLoaders({ isDev }: ConfigOptions.BuildOptions): webpack.Rul
 
     return [
         tsLoader,
-        cssLoader
+        cssLoader,
+        svgLoader
     ]
 }

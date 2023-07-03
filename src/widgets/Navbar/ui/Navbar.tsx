@@ -4,6 +4,7 @@ import { classNames } from "helpers/classNames/classNames";
 import { FunctionComponent } from "react";
 import { useTheme } from "app/providers/ThemeProvider";
 import { CustomLink } from "shared/CustomLink";
+import { ToggleTheme } from "shared/ToggleTheme";
 
 interface INavbarProps {
     className?: string;
@@ -26,7 +27,7 @@ export const Navbar: FunctionComponent<INavbarProps> = (props) => {
                     Contacts
                 </CustomLink>
             </nav>
-            <button onClick={toggleSchema}>Change theme</button>
+            <ToggleTheme />
         </div>
     );
 };
