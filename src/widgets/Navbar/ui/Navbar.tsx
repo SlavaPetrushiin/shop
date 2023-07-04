@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
-import cls from "./Navbar.module.scss";
 import { classNames } from "helpers/classNames/classNames";
 import { FunctionComponent } from "react";
-import { useTheme } from "app/providers/ThemeProvider";
 import { CustomLink } from "shared/CustomLink";
 import { ToggleTheme } from "shared/ToggleTheme";
+import { useTranslation, initReactI18next } from "react-i18next";
+import cls from "./Navbar.module.scss";
 
 interface INavbarProps {
     className?: string;
@@ -12,19 +11,19 @@ interface INavbarProps {
 
 export const Navbar: FunctionComponent<INavbarProps> = (props) => {
     const { className } = props;
-    const { theme, toggleSchema } = useTheme();
+    const { t } = useTranslation();
 
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
             <nav className={cls.links}>
                 <CustomLink className={cls.links_item} to={`/`}>
-                    Main
+                    {t("Главная")}
                 </CustomLink>
                 <CustomLink className={cls.links_item} to={`/about`}>
-                    About
+                    {t("О нас")}
                 </CustomLink>
                 <CustomLink className={cls.links_item} to={`/contacts`}>
-                    Contacts
+                    {t("Контакты")}
                 </CustomLink>
             </nav>
             <ToggleTheme />

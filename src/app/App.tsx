@@ -6,6 +6,7 @@ import { ContactsPage } from "pages/ContactsPage";
 import { RootPage } from "pages/RootPage";
 import { useTheme } from "app/providers/ThemeProvider";
 import { classNames } from "../helpers/classNames/classNames";
+import { useTranslation } from "react-i18next";
 import "app/styles/index.scss";
 
 const router = createBrowserRouter([
