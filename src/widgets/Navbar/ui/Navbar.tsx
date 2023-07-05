@@ -2,8 +2,9 @@ import { classNames } from "helpers/classNames/classNames";
 import { FunctionComponent } from "react";
 import { CustomLink } from "shared/CustomLink";
 import { ToggleTheme } from "shared/ToggleTheme";
-import { useTranslation, initReactI18next } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import cls from "./Navbar.module.scss";
+import ToggleLanguage from "shared/ToggleLanguage/ui/ToggleLanguage";
 
 interface INavbarProps {
     className?: string;
@@ -26,6 +27,7 @@ export const Navbar: FunctionComponent<INavbarProps> = (props) => {
                     {t("Контакты")}
                 </CustomLink>
             </nav>
+            <ToggleLanguage />
             <ToggleTheme />
         </div>
     );

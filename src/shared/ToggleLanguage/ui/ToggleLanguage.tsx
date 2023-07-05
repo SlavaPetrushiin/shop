@@ -1,16 +1,17 @@
 import React from "react";
-import cls from "./ToggleLanguage.module.scss";
 import { Button } from "shared/Button";
-import i18n from "shared/config/i18n/i18n";
+import { useTranslation } from "react-i18next";
 
 interface ToggleLanguageProps {}
 
 const ToggleLanguage: React.FC<ToggleLanguageProps> = (props) => {
-    const changeLanguage = (lng: string) => {
-        i18n.changeLanguage(lng);
+    const { t, i18n } = useTranslation();
+
+    const toggleLanguage = () => {
+        i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
     };
 
-    return <Button>l</Button>;
+    return <Button onClick={toggleLanguage}>{t("Перевод")}</Button>;
 };
 
 export default ToggleLanguage;

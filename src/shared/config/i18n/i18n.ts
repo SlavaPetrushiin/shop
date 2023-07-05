@@ -6,12 +6,17 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import translationEN from './../../../../public/locales/en/translation.json';
 import translationRU from './../../../../public/locales/ru/translation.json';
 
+import mainEN from './../../../../public/locales/en/main.json';
+import mainRU from './../../../../public/locales/ru/main.json';
+
 const resources = {
-    en: {
-        translation: translationEN
-    },
     ru: {
-        translation: translationRU
+        translation: translationRU,
+        main: mainRU
+    },
+    en: {
+        translation: translationEN,
+        main: mainEN
     }
 };
 
@@ -22,11 +27,11 @@ i18n
     .init({
         resources,
         fallbackLng: 'en',
-        debug: false,
+        debug: __IS_DEV__ ? true : false,
 
         interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
-        }
+        },
     });
 
 export default i18n;
