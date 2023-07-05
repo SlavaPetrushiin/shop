@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useMemo, useState } from "react";
+import React, { FunctionComponent, useMemo, useState } from "react";
 import { LOCAL_STORAGE_THEME_KEY, ThemeContext, TypesSchema } from "../lib/ThemeContext";
 
 interface ThemeProviderProps {
@@ -10,7 +10,7 @@ const defaultSchema = (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as TypesSch
 export const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({ children }) => {
     const [theme, setTheme] = useState<TypesSchema>(defaultSchema);
     const toggleSchema = () => {
-        let newTheme = theme === TypesSchema.LIGHT ? TypesSchema.DARK : TypesSchema.LIGHT;
+        const newTheme = theme === TypesSchema.LIGHT ? TypesSchema.DARK : TypesSchema.LIGHT;
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
         setTheme(newTheme);
     };
@@ -20,7 +20,7 @@ export const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({ children 
             theme,
             toggleSchema,
         }),
-        [theme]
+        [theme],
     );
 
     return <ThemeContext.Provider value={defaultProps}>{children}</ThemeContext.Provider>;

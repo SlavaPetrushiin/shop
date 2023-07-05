@@ -1,3 +1,3 @@
-import Root from "./ui/Root"
+import Root from "./ui/Root";
 
 export {Root as RootPage};

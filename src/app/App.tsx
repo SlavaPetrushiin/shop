@@ -1,12 +1,13 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Suspense } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainPage } from "pages/MainPage";
 import { AboutPage } from "pages/AboutPage";
 import { ContactsPage } from "pages/ContactsPage";
 import { RootPage } from "pages/RootPage";
 import { useTheme } from "app/providers/ThemeProvider";
 import { classNames } from "../helpers/classNames/classNames";
-import { useTranslation } from "react-i18next";
+
+
 import "app/styles/index.scss";
 
 const router = createBrowserRouter([

@@ -5,9 +5,8 @@ import DarkIcon from "./../../assets/icons/dark-icon.svg";
 import LightIcon from "./../../assets/icons/light-icon.svg";
 import { Button } from "./../../Button";
 
-interface ToggleThemeProps {}
 
-const ToggleTheme: React.FC<ToggleThemeProps> = (props) => {
+const ToggleTheme: React.FC = () => {
     const { theme, toggleSchema } = useTheme();
 
     return (

@@ -1,6 +1,6 @@
 export namespace ConfigOptions {
 
-    export type BuildMode = 'production' | 'development';
+    export type BuildMode = "production" | "development";
 
     export interface BuildPaths {
         entry: string;
@@ -9,7 +9,7 @@ export namespace ConfigOptions {
         src: string;
     }
 
-    export interface BuildEnv{
+    export interface BuildEnv {
         mode: BuildMode,
         port: number
     }

@@ -2,9 +2,7 @@ import React from "react";
 import { Button } from "shared/Button";
 import { useTranslation } from "react-i18next";
 
-interface ToggleLanguageProps {}
-
-const ToggleLanguage: React.FC<ToggleLanguageProps> = (props) => {
+const ToggleLanguage: React.FC = () => {
     const { t, i18n } = useTranslation();
 
     const toggleLanguage = () => {

@@ -17,13 +17,13 @@ export const Navbar: FunctionComponent<INavbarProps> = (props) => {
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
             <nav className={cls.links}>
-                <CustomLink className={cls.links_item} to={`/`}>
+                <CustomLink className={cls.links_item} to={"/"}>
                     {t("Главная")}
                 </CustomLink>
-                <CustomLink className={cls.links_item} to={`/about`}>
+                <CustomLink className={cls.links_item} to={"/about"}>
                     {t("О нас")}
                 </CustomLink>
-                <CustomLink className={cls.links_item} to={`/contacts`}>
+                <CustomLink className={cls.links_item} to={"/contacts"}>
                     {t("Контакты")}
                 </CustomLink>
             </nav>

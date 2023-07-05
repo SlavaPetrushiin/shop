@@ -1,9 +1,9 @@
-import { buildDevServer } from './buildDevServer';
-import { buildLoaders } from './buildLoaders';
-import { buildPlugins } from './buildPlugins';
-import { buildResolves } from './buildResolves';
-import { ConfigOptions } from './types/config';
-import webpack from 'webpack';
+import { buildDevServer } from "./buildDevServer";
+import { buildLoaders } from "./buildLoaders";
+import { buildPlugins } from "./buildPlugins";
+import { buildResolves } from "./buildResolves";
+import { ConfigOptions } from "./types/config";
+import webpack from "webpack";
 
 export function buildWebpackConfig(options: ConfigOptions.BuildOptions): webpack.Configuration {
     const { mode, paths, isDev } = options;
@@ -11,20 +11,20 @@ export function buildWebpackConfig(options: ConfigOptions.BuildOptions): webpack
     return {
         mode: mode,
         entry: paths.entry,
-        devtool: isDev ? 'inline-source-map' : undefined,
+        devtool: isDev ? "inline-source-map" : undefined,
         devServer: buildDevServer(options),
         module: {
-            rules: buildLoaders(options)
+            rules: buildLoaders(options),
         },
         resolve: buildResolves(options),
         plugins: buildPlugins(options),
         output: {
-            filename: '[name][contenthash].js',
+            filename: "[name][contenthash].js",
             path: paths.build,
-            clean: true
+            clean: true,
         },
         optimization: {
-            runtimeChunk: 'single',
-        }
-    }
+            runtimeChunk: "single",
+        },
+    };
 }

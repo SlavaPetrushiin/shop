@@ -12,5 +12,5 @@ root.render(
         <ThemeProvider>
             <App />
         </ThemeProvider>
-    </React.StrictMode>
+    </React.StrictMode>,
 );
