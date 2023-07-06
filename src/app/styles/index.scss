@@ -1,9 +1,7 @@
-@import "./reset.scss";
-@import "./variables/global.scss";
-@import "./variables/variables.scss";
-
-@import "./theme/light.scss";
-@import "./theme/dark.scss";
+@import "./reset";
+@import "./variables/global";
+@import "./theme/light";
+@import "./theme/dark";
 
 .app {
 	min-height: 100vh;
@@ -12,6 +10,5 @@
 
 .main-page {
 	height: calc(100vh - var(--height-header));
-
 	display: flex;
 }
