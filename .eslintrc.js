@@ -30,7 +30,8 @@ module.exports = {
     "plugins": [
         "@typescript-eslint",
         "react",
-        "import"
+        "import",
+        "i18next"
     ],
     "rules": {
         "indent": [
@@ -68,6 +69,7 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'react/require-default-props': 'off',
-        "@typescript-eslint/no-namespace": "off"
+        "@typescript-eslint/no-namespace": "off",
+        "i18next/no-literal-string": 2
     }
 };
