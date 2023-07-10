@@ -56,8 +56,8 @@ export function buildLoaders({isDev}: ConfigOptions.BuildOptions): webpack.RuleS
     };
 
     return [
-        tsLoader,
         babelLoader,
+        tsLoader,
         cssLoader,
         svgLoader
     ];
