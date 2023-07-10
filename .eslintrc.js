@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest/globals": true
     },
     "extends": [
         "eslint:recommended",
@@ -70,6 +71,7 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'react/require-default-props': 'off',
         "@typescript-eslint/no-namespace": "off",
-        "i18next/no-literal-string": 2
+        "i18next/no-literal-string": 2,
+        "linebreak-style": 0
     }
 };

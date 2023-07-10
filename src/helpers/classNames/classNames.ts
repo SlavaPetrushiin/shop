@@ -12,6 +12,6 @@ export function classNames(cls: string, mods: Mods = {}, additional: string[] = 
     return [
         cls,
         ...activeKeysMods,
-        ...additional,
+        ...additional.filter(Boolean),
     ].join(" ");
 }
