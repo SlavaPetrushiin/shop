@@ -4,8 +4,10 @@ import {MainPage} from "pages/MainPage";
 import {ContactsPage} from "pages/ContactsPage";
 import {RootPage} from "pages/RootPage";
 import {NotFoundPage} from "pages/NotFoundPage";
-import "app/styles/index.scss";
 import {AboutPage} from "pages/AboutPage";
+import {LoaderPage} from "pages/LoaderPage";
+import "app/styles/index.scss";
+
 
 const router = createBrowserRouter([
     {
@@ -34,7 +36,7 @@ const router = createBrowserRouter([
 
 export const AppRouter = () => {
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoaderPage />}>
             <RouterProvider router={router} />
         </Suspense>
     );

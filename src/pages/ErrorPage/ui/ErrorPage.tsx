@@ -1,6 +1,6 @@
 import React from "react";
 import {isRouteErrorResponse, useRouteError} from "react-router-dom";
-import cls from "./ErrorPage.module.scss";
+import "./ErrorPage.scss";
 
 const ErrorPage: React.FC = () => {
     const error = useRouteError();

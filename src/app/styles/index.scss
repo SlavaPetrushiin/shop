@@ -5,10 +5,13 @@
 
 .app {
 	min-height: 100vh;
+	height: 100vh;
 	overflow: hidden;
 }
 
 .main-page {
 	height: calc(100vh - var(--height-header));
-	display: flex;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: auto 1fr;
 }
