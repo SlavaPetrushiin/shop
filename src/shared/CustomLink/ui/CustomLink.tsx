@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import { LinkProps, NavLink } from "react-router-dom";
-import { classNames } from "helpers/classNames/classNames";
+import React, {ReactNode} from "react";
+import {LinkProps, NavLink} from "react-router-dom";
+import {classNames} from "shared/lib/classNames/classNames";
 import cls from "./CustomLink.module.scss";
 
 export enum CustomLinkTheme {
@@ -16,13 +16,13 @@ interface CustomLinkProps extends LinkProps {
 }
 
 const CustomLink: React.FC<CustomLinkProps> = (props) => {
-    const { children, className, to, theme = CustomLinkTheme.PRIMARY, ...otherProps } = props;
+    const {children, className, to, theme = CustomLinkTheme.PRIMARY, ...otherProps} = props;
 
     return (
         <NavLink
-            className={({ isActive, isPending }) => {
+            className={({isActive, isPending}) => {
                 const isActiveLink = isPending ? "pending" : isActive ? "active" : "";
-                return classNames(cls.links_item, { active: isActiveLink }, [cls[theme], className]);
+                return classNames(cls.links_item, {active: isActiveLink}, [cls[theme], className]);
             }}
             to={to}
             {...otherProps}

@@ -5,7 +5,7 @@ import {AboutPage} from "pages/AboutPage";
 import {ContactsPage} from "pages/ContactsPage";
 import {RootPage} from "pages/RootPage";
 import {useTheme} from "app/providers/ThemeProvider";
-import {classNames} from "../helpers/classNames/classNames";
+import {classNames} from "../shared/lib/classNames/classNames";
 
 
 import "app/styles/index.scss";
