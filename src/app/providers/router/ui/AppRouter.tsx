@@ -1,10 +1,11 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Suspense } from "react";
-import { MainPage } from "pages/MainPage";
-import { AboutPage } from "pages/AboutPage";
-import { ContactsPage } from "pages/ContactsPage";
-import { RootPage } from "pages/RootPage";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {Suspense} from "react";
+import {MainPage} from "pages/MainPage";
+import {ContactsPage} from "pages/ContactsPage";
+import {RootPage} from "pages/RootPage";
+import {NotFoundPage} from "pages/NotFoundPage";
 import "app/styles/index.scss";
+import {AboutPage} from "pages/AboutPage";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
                 element: <ContactsPage />,
             },
         ],
+    },
+    {
+        path: "*",
+        element: <NotFoundPage />,
     },
 ]);
 

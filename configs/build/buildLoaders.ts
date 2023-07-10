@@ -20,19 +20,19 @@ export function buildLoaders({isDev}: ConfigOptions.BuildOptions): webpack.RuleS
         use: {
             loader: "babel-loader",
             options: {
-                presets: ['@babel/preset-env'],
+                presets: ["@babel/preset-env"],
                 "plugins": [
                     [
                         "i18next-extract",
                         {
-                            locales: ['ru', 'en'],
-                            keyAsDefaultValue: true
-                        }
+                            locales: ["ru", "en"],
+                            keyAsDefaultValue: true,
+                        },
                     ],
-                ]
-            }
-        }
-    }
+                ],
+            },
+        },
+    };
 
     const cssLoader = {
         test: /\.s[ac]ss$/i,
@@ -59,6 +59,6 @@ export function buildLoaders({isDev}: ConfigOptions.BuildOptions): webpack.RuleS
         babelLoader,
         tsLoader,
         cssLoader,
-        svgLoader
+        svgLoader,
     ];
 }
