@@ -1,7 +1,14 @@
 {
     "presets": [
         "@babel/preset-env",
-        "@babel/preset-typescript"
+        "@babel/preset-typescript",
+        [
+            "@babel/preset-react",
+            {
+                //Настройка runtime: 'automatic' добавляет React в глобальную область видимости, что позволяет не импортировать его явно в каждом файле.
+                "runtime": "automatic"
+            }
+        ]
     ],
     "plugins": [
         "i18next-extract"

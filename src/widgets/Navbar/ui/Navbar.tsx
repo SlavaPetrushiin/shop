@@ -1,10 +1,10 @@
 import {classNames} from "shared/lib/classNames/classNames";
 import {FunctionComponent} from "react";
-import {CustomLink} from "shared/CustomLink";
-import {ToggleTheme} from "shared/ToggleTheme";
+import {CustomLink} from "shared/ui/CustomLink/CustomLink";
+import {ToggleTheme} from "shared/ui/ToggleTheme/ToggleTheme";
 import {useTranslation} from "react-i18next";
+import {ToggleLanguage} from "shared/ui/ToggleLanguage/ToggleLanguage";
 import cls from "./Navbar.module.scss";
-import ToggleLanguage from "shared/ToggleLanguage/ui/ToggleLanguage";
 
 interface INavbarProps {
     className?: string;

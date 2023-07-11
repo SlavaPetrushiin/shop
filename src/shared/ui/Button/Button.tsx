@@ -11,13 +11,12 @@ interface IButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     theme?: ThemeButton;
 }
 
-const Button: React.FC<IButtonProps> = (props) => {
+export const Button: React.FC<IButtonProps> = (props) => {
     const {className = "", children, theme = ThemeButton.CLEAR, ...otherProps} = props;
     return (
-        <button className={classNames("btn", {}, [className, cls[theme]])} {...otherProps}>
+        <button data-testid="custom-button" className={classNames("btn", {}, [className, cls[theme]])} {...otherProps}>
             {children}
         </button>
     );
 };
 
-export default Button;

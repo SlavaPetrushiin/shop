@@ -15,7 +15,7 @@ interface CustomLinkProps extends LinkProps {
     theme?: CustomLinkTheme;
 }
 
-const CustomLink: React.FC<CustomLinkProps> = (props) => {
+export const CustomLink: React.FC<CustomLinkProps> = (props) => {
     const {children, className, to, theme = CustomLinkTheme.PRIMARY, ...otherProps} = props;
 
     return (
@@ -31,5 +31,3 @@ const CustomLink: React.FC<CustomLinkProps> = (props) => {
         </NavLink>
     );
 };
-
-export default CustomLink;

@@ -1,5 +1,5 @@
 import React from "react";
-import {Loader} from "shared/Loader";
+import {Loader} from "shared/ui/Loader/Loader";
 import cls from "./LoaderPage.module.scss";
 import {classNames} from "shared/lib/classNames/classNames";
 

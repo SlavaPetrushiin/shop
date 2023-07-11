@@ -1,13 +1,13 @@
 import React from "react";
-import { useTheme } from "app/providers/ThemeProvider";
-import { TypesSchema } from "app/providers/ThemeProvider/lib/ThemeContext";
+import {useTheme} from "app/providers/ThemeProvider";
+import {TypesSchema} from "app/providers/ThemeProvider/lib/ThemeContext";
 import DarkIcon from "./../../assets/icons/dark-icon.svg";
 import LightIcon from "./../../assets/icons/light-icon.svg";
-import { Button } from "./../../Button";
+import {Button} from "./../Button/Button";
 
 
-const ToggleTheme: React.FC = () => {
-    const { theme, toggleSchema } = useTheme();
+export const ToggleTheme: React.FC = () => {
+    const {theme, toggleSchema} = useTheme();
 
     return (
         <Button className="btn-toggle-theme" onClick={toggleSchema}>
@@ -16,4 +16,3 @@ const ToggleTheme: React.FC = () => {
     );
 };
 
-export default ToggleTheme;
